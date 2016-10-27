@@ -1,0 +1,121 @@
+[+] 注册监听线程程序开启
+[+] 命令返回监听线程开启
+1 刷新查看连接主机
+2 设置组信息
+3 执行命令
+
+               ###########################查询在线主机
+请输入相应的序号：1
+[等待 1]
+已登陆的客户端ip如下！
+192.168.2.144
+192.168.2.145
+1 刷新查看连接主机
+2 设置组信息
+3 执行命令
+请输入相应的序号：2
+
+               ###########################查设置组的信息   组的信息master端退出以后丢失，需要重新创建组信息
+加入组之前需要先刷新一下主机信息 先按1
+加入组的模式是，组名 ip 多ip用逗号分隔,每次只允许定义一组信息，如需多组请多次输入！
+请按照格式输入，<q>返回,请按照格式输入：sun 192.168.2.144,192.168.2.145
+{'sun': ['192.168.2.144', '192.168.2.145']}
+sun 组设置成功！
+1 刷新查看连接主机
+2 设置组信息
+3 执行命令
+               ###########################可以使用ip 加命令或者 组加命令远程执行  多ip使用逗号分开
+请输入相应的序号：3
+格式如下 ip command,或者 组 command ，第一种多ip的情况逗号分隔
+请输入对应格式 <q>退出：sun ifconfig
+################ 192.168.2.144
+eth0      Link encap:Ethernet  HWaddr 00:50:56:9B:C1:85
+          inet addr:192.168.2.144  Bcast:192.168.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::250:56ff:fe9b:c185/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:656678704 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:567665909 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:119728743517 (111.5 GiB)  TX bytes:121320628194 (112.9 GiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:188346580 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:188346580 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:11869206865 (11.0 GiB)  TX bytes:11869206865 (11.0 GiB)
+
+lo:1      Link encap:Local Loopback
+          inet addr:192.168.2.149  Mask:255.255.255.255
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+
+
+################ 192.168.2.145
+eth0      Link encap:Ethernet  HWaddr 00:50:56:9B:81:B9
+          inet addr:192.168.2.145  Bcast:192.168.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::250:56ff:fe9b:81b9/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:174145641 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:139186868 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:74504686972 (69.3 GiB)  TX bytes:35318602001 (32.8 GiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:93735115 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:93735115 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:27502416178 (25.6 GiB)  TX bytes:27502416178 (25.6 GiB)
+
+
+<<<<<<上面是执行结果，回车继续>>>>>
+
+
+               ###########################多ip查询
+
+请输入相应的序号：3
+格式如下 ip command,或者 组 command ，第一种多ip的情况逗号分隔
+请输入对应格式 <q>退出：192.168.2.145,192.168.2.144 date
+################ 192.168.2.144
+Thu Oct 27 16:45:20 CST 2016
+
+################ 192.168.2.145
+Thu Oct 27 16:42:03 CST 2016
+
+<<<<<<上面是执行结果，回车继续>>>>>
+
+
+
+           ###########################多ip查询  如过故意输入一个错误ip信息，会出现超时现象，错误的ip不打印，
+                                        按1查看那些客户端连接着再输入
+
+
+请输入相应的序号：3
+格式如下 ip command,或者 组 command ，第一种多ip的情况逗号分隔
+请输入对应格式 <q>退出：192.168.2.145,192.168.2.143 ifconfig
+输入信息有误，检查逗号是否是正常逗号，没有返回数据的ip 请按1检查是否连接正常数据超时3s!
+################ 192.168.2.145
+eth0      Link encap:Ethernet  HWaddr 00:50:56:9B:81:B9
+          inet addr:192.168.2.145  Bcast:192.168.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::250:56ff:fe9b:81b9/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:174187100 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:139214982 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:74519932869 (69.4 GiB)  TX bytes:35324515820 (32.8 GiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:93735115 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:93735115 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:27502416178 (25.6 GiB)  TX bytes:27502416178 (25.6 GiB)
+
+
+<<<<<<上面是执行结果，回车继续>>>>>
